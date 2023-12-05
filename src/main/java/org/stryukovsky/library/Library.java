@@ -1,4 +1,6 @@
-package org.stryukovsky;
+package org.stryukovsky.library;
+
+import org.stryukovsky.commons.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -36,5 +38,9 @@ public class Library {
             throw new BadAuthorException(author);
         }
         book.addAuthor(author);
+    }
+
+    public boolean hasBook(Book book) {
+        return books.contains(book);
     }
 }

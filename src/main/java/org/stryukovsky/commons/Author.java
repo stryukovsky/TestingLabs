@@ -1,4 +1,4 @@
-package org.stryukovsky;
+package org.stryukovsky.commons;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package org.stryukovsky;
+package org.stryukovsky.commons;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -7,14 +7,14 @@ public class Book {
     private ArrayList<Author> authors;
     private String title;
     private int yearOfRelease;
-    private long edition;
+    private long circulation;
 
-    public Book(Author author, String title, int yearOfRelease, long edition) {
+    public Book(Author author, String title, int yearOfRelease, long circulation) {
         this.authors = new ArrayList<>();
         authors.add(author);
         this.title = title;
         this.yearOfRelease = yearOfRelease;
-        this.edition = edition;
+        this.circulation = circulation;
     }
 
     public void addAuthor(Author author) {
@@ -26,12 +26,12 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return getYearOfRelease() == book.getYearOfRelease() && getEdition() == book.getEdition() && Objects.equals(getAuthors(), book.getAuthors()) && Objects.equals(getTitle(), book.getTitle());
+        return getYearOfRelease() == book.getYearOfRelease() && getCirculation() == book.getCirculation() && Objects.equals(getAuthors(), book.getAuthors()) && Objects.equals(getTitle(), book.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getAuthors(), getTitle(), getYearOfRelease(), getEdition());
+        return Objects.hash(getAuthors(), getTitle(), getYearOfRelease(), getCirculation());
     }
 
     public ArrayList<Author> getAuthors() {
@@ -58,11 +58,11 @@ public class Book {
         this.yearOfRelease = yearOfRelease;
     }
 
-    public long getEdition() {
-        return edition;
+    public long getCirculation() {
+        return circulation;
     }
 
-    public void setEdition(long edition) {
-        this.edition = edition;
+    public void setCirculation(long circulation) {
+        this.circulation = circulation;
     }
 }

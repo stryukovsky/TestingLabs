@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.stryukovsky.*;
+import org.stryukovsky.commons.*;
+import org.stryukovsky.library.BadAuthorException;
+import org.stryukovsky.library.BookDuplicateException;
+import org.stryukovsky.library.Library;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
