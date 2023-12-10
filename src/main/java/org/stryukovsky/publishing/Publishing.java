@@ -1,7 +1,9 @@
 package org.stryukovsky.publishing;
 
 import org.stryukovsky.commons.Author;
+import org.stryukovsky.commons.AuthorDuplicateException;
 import org.stryukovsky.commons.Book;
+import org.stryukovsky.library.BadAuthorException;
 import org.stryukovsky.library.BookDuplicateException;
 import org.stryukovsky.library.Library;
 
@@ -39,6 +41,10 @@ public class Publishing {
         }
         library.addBook(book);
         incrementAlreadyPublishedBooksCount(author);
+    }
+
+    public void addCoAuthor(Book book, Author author) throws AuthorDuplicateException, BadAuthorException {
+        library.addCoAuthorToBook(book, author);
     }
 
     private int getAlreadyPublishedBooksCount(Author author) {
