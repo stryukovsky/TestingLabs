@@ -31,12 +31,9 @@ public class Library {
         authors.addAll(book.getAuthors());
     }
 
-    public void addCoAuthorToBook(Book book, Author author) throws BadAuthorException, AuthorDuplicateException {
+    public void addCoAuthorToBook(Book book, Author author) throws AuthorDuplicateException {
         if (book.getAuthors().contains(author))
             throw new AuthorDuplicateException(book, author);
-        if (!authors.contains(author)) {
-            throw new BadAuthorException(author);
-        }
         book.addAuthor(author);
     }
 

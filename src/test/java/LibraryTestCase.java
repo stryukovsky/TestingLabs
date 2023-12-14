@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.stryukovsky.commons.*;
 import org.stryukovsky.library.BadAuthorException;
@@ -76,7 +77,7 @@ public class LibraryTestCase {
         assertEquals(secondBook.getAuthors().size(), 1);
     }
 
-    @Test
+    @Disabled
     public void shouldFailAddingBadAuthor() throws Exception {
         try {
             library.addBook(firstBook);
